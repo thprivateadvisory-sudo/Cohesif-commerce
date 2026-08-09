@@ -2413,7 +2413,8 @@ p { color: var(--gray-700); line-height: 1.65; }
       <h3 id="modalTitle">Parlons de votre projet.</h3>
       <p class="modal-subtitle">30 minutes. Sans engagement. Nous revenons vers vous sous 24h ouvrées avec un créneau.</p>
 
-      <form class="modal-form" id="contactForm" novalidate>
+      <form class="modal-form" id="contactForm" action="https://formspree.io/f/mzdnndna" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nouvelle demande - Cohesif Commerce">
         <div class="form-group">
           <label for="cf-name">Nom complet *</label>
           <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Jean Dupont" />
@@ -2912,7 +2913,7 @@ p { color: var(--gray-700); line-height: 1.65; }
   // Remplace YOUR_FORMSPREE_ENDPOINT par ton URL Formspree
   // Ex : https://formspree.io/f/xabcdefg
   // ==========================================================
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdnndna';
 
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
