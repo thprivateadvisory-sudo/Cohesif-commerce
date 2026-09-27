@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Votre commande — Paiement sécurisé | Cohesif Commerce</title>
+  <meta name="description" content="Récapitulatif de votre commande et paiement sécurisé par Cohesif Commerce, société de commerce du Groupe Cohesif." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0c1c33" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./commande.css" />
+</head>
+<body>
+
+<header class="co-header">
+  <div class="wrap">
+    <a href="./index.html" class="co-brand">
+      <img src="./img/logo-commerce-mark.png" alt="" width="34" height="37" />
+      <span><strong>COHESIF COMMERCE</strong><small>Société du Groupe Cohesif</small></span>
+    </a>
+    <span class="co-secure">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span class="co-secure-long">Paiement 100&nbsp;% sécurisé</span><span class="co-secure-short">Sécurisé</span>
+    </span>
+  </div>
+</header>
+
+<main class="co-main">
+  <div class="wrap">
+    <ol class="co-steps" aria-label="Étapes de la commande">
+      <li class="active"><span>1</span>Récapitulatif</li>
+      <li><span>2</span>Livraison et paiement</li>
+      <li><span>3</span>Confirmation</li>
+    </ol>
+
+    <div class="co-loading" data-state="loading">Chargement de votre commande…</div>
+
+    <div class="co-empty" data-state="empty" hidden>
+      <h1>Ce produit est introuvable</h1>
+      <p>Le lien utilisé est incomplet ou le produit n'est plus disponible. Retrouvez toutes nos bornes dans la boutique Cohesif Energy.</p>
+      <a class="co-pay" href="https://cohesifenergy.fr/boutique.html">Voir la boutique</a>
+    </div>
+
+    <div class="co-grid" data-state="ready" hidden>
+      <section class="co-card">
+        <div class="co-kicker">Vous êtes sur le point d'acheter</div>
+        <h1 class="co-title" data-f="titre"></h1>
+        <div class="co-product">
+          <div class="co-product-img"><img data-f="image" alt="" /></div>
+          <div>
+            <span class="co-chip" data-f="marque"></span>
+            <h2 data-f="nom"></h2>
+            <div class="co-variant" data-f="variante"></div>
+            <div class="co-variant-detail" data-f="detail"></div>
+            <ul class="co-points" data-f="points"></ul>
+          </div>
+        </div>
+        <table class="co-specs"><tbody data-f="specs"></tbody></table>
+        <div class="co-note" data-f="note" hidden></div>
+        <a class="co-back" data-f="retour" href="#">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Modifier mon choix
+        </a>
+      </section>
+
+      <aside class="co-aside">
+        <div class="co-card co-summary">
+          <h3>Récapitulatif</h3>
+          <ul class="co-lines" data-f="lignes"></ul>
+          <div class="co-total"><span>Total TTC</span><strong data-f="total"></strong></div>
+          <div class="co-deposit" data-f="acompte" hidden></div>
+
+          <ul class="co-meta" data-f="meta"></ul>
+
+          <a class="co-pay" data-f="payer" href="#" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span data-f="payer-label">Continuer vers le paiement sécurisé</span>
+          </a>
+          <p class="co-legal">En poursuivant, vous acceptez nos <a href="./cgv-vente.html" target="_blank" rel="noopener">conditions générales de vente</a>. Adresse de livraison et quantité à l'étape suivante.</p>
+          <div class="co-warning" data-f="inactif" hidden>
+            Le paiement en ligne est en cours d'activation. Envoyez-nous votre commande par e-mail : nous vous répondons sous 24 h ouvrées avec votre lien de paiement.
+          </div>
+
+          <div class="co-methods" aria-label="Moyens de paiement acceptés"><span>CB</span><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>APPLE PAY</span><span>GOOGLE PAY</span></div>
+          <div class="co-stripe">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Paiement chiffré, traité par Stripe
+          </div>
+        </div>
+        <p class="co-help">Une question ? <a href="mailto:cohesifcommerce@gmail.com">cohesifcommerce@gmail.com</a></p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="co-footer">
+  <div class="wrap">
+    <div>© 2026 Groupe Cohesif · Cohesif Commerce</div>
+    <nav>
+      <a href="./cgv-vente.html">CGV de vente</a>
+      <a href="./cgv-vente.html#vendeur">Mentions légales</a>
+      <a href="mailto:cohesifcommerce@gmail.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // Catalogues par préfixe de référence (CE- = Cohesif Energy). Ajouter ici les prochaines marques.
+  var CATALOGUES = {
+    CE: './data/catalogues/cohesif-energy.json'
+  };
+  var TVA = 0.20;
+  var EMAIL = 'cohesifcommerce@gmail.com';
+
+  var params = new URLSearchParams(location.search);
+  var id = (params.get('produit') || '').toUpperCase();
+  var $ = function (f) { return document.querySelector('[data-f="' + f + '"]'); };
+
+  function show(state) {
+    document.querySelectorAll('[data-state]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-state') !== state;
+    });
+  }
+  function eur(n, dec) {
+    return n.toLocaleString('fr-FR', { minimumFractionDigits: dec ? 2 : 0, maximumFractionDigits: dec ? 2 : 0 }) + ' €';
+  }
+  function money(n) { return eur(n, Math.round(n * 100) % 100 !== 0); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  var CHECK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+
+  var prefix = id.split('-')[0];
+  if (!/^[A-Z0-9-]{3,40}$/.test(id) || !CATALOGUES[prefix]) { show('empty'); return; }
+
+  function getJSON(url) {
+    return fetch(url, { cache: 'no-cache' }).then(function (r) {
+      if (!r.ok) throw new Error(url);
+      return r.json();
+    });
+  }
+
+  Promise.all([getJSON(CATALOGUES[prefix]), getJSON('./data/paiements.json').catch(function () { return { liens: {} }; })])
+    .then(function (res) { render(res[0], res[1]); })
+    .catch(function () { show('empty'); });
+
+  function render(cat, pay) {
+    var produit = null, variante = null;
+    cat.produits.forEach(function (p) {
+      p.variantes.forEach(function (v) { if (v.id === id) { produit = p; variante = v; } });
+    });
+    if (!produit) { show('empty'); return; }
+
+    var ht = produit.affichage === 'HT';
+    var totalTTC = ht ? variante.prix * (1 + TVA) : variante.prix;
+    var acompte = produit.paiement === 'acompte' ? Math.round(totalTTC * produit.acomptePct) / 100 : null;
+    var label = produit.nom + (produit.variantes.length > 1 ? ' — ' + variante.label : '');
+
+    document.title = label + ' — Paiement sécurisé | Cohesif Commerce';
+    $('titre').textContent = label;
+    var img = $('image');
+    img.src = cat.site + '/' + produit.image;
+    img.alt = produit.nom;
+    $('marque').innerHTML = CHECK + ' Sélectionné par ' + esc(cat.marque);
+    $('nom').textContent = produit.nom;
+    $('variante').textContent = variante.label;
+    $('detail').textContent = variante.detail;
+    $('points').innerHTML = produit.points.slice(0, 4).map(function (x) { return '<li>' + CHECK + '<span>' + esc(x) + '</span></li>'; }).join('');
+    $('specs').innerHTML = Object.keys(produit.specs).slice(0, 7).map(function (k) {
+      return '<tr><th>' + esc(k) + '</th><td>' + esc(produit.specs[k]) + '</td></tr>';
+    }).join('');
+    $('retour').href = cat.site + '/' + produit.slug + '.html';
+
+    var note = $('note');
+    if (/-POSE$/.test(id)) {
+      note.hidden = false;
+      note.innerHTML = '<strong>Pose incluse.</strong> Après votre paiement, un technicien vous contacte sous 48 h ouvrées pour valider votre installation sur photos. Si elle sort du forfait standard, nous vous proposons un devis : vous restez libre de le refuser et d\'être remboursé de la pose.';
+    } else if (acompte !== null) {
+      note.hidden = false;
+      note.innerHTML = '<strong>Réservation avec acompte.</strong> Nous vous contactons sous 48 h ouvrées pour confirmer la configuration de votre borne. Le solde est réglé par virement avant expédition ; la facture est établie au nom de votre entreprise.';
+    }
+
+    var lignes = [];
+    if (ht) {
+      lignes.push(['Prix HT', eur(variante.prix)]);
+      lignes.push(['TVA 20 %', money(variante.prix * TVA)]);
+    } else {
+      lignes.push(['Prix TTC', eur(variante.prix)]);
+    }
+    lignes.push(['Livraison', produit.gamme === 'ac' ? '<span class="free">Offerte</span>' : '<span class="free">Incluse</span>']);
+    $('lignes').innerHTML = lignes.map(function (l) {
+      return '<li><span class="muted">' + l[0] + '</span><span>' + l[1] + '</span></li>';
+    }).join('');
+    $('total').textContent = money(totalTTC);
+
+    if (acompte !== null) {
+      var box = $('acompte');
+      box.hidden = false;
+      box.innerHTML = '<strong><span>À régler aujourd\'hui</span><span>' + money(acompte) + '</span></strong>' +
+        'Acompte de ' + produit.acomptePct + ' %. Solde de ' + money(totalTTC - acompte) + ' par virement avant expédition.';
+    }
+
+    var meta = [produit.livraison, produit.delai, produit.garantie];
+    if (!ht) meta.push('14 jours pour changer d\'avis (particuliers)');
+    $('meta').innerHTML = meta.map(function (m) { return '<li>' + CHECK + '<span>' + esc(m) + '</span></li>'; }).join('');
+
+    var btn = $('payer');
+    var lien = (pay.liens || {})[id];
+    if (lien && /^https:\/\/(buy\.stripe\.com|checkout\.stripe\.com)\//.test(lien)) {
+      var ref = id + '_' + (params.get('source') || 'direct').replace(/[^a-z0-9]/gi, '').slice(0, 30);
+      btn.href = lien + (lien.indexOf('?') < 0 ? '?' : '&') + 'client_reference_id=' + encodeURIComponent(ref) + '&locale=fr';
+      $('payer-label').textContent = acompte !== null ? 'Payer l\'acompte de ' + money(acompte) : 'Payer ' + money(totalTTC) + ' en toute sécurité';
+    } else {
+      $('inactif').hidden = false;
+      btn.classList.add('alt');
+      $('payer-label').textContent = 'Commander par e-mail';
+      var body = 'Bonjour,\n\nJe souhaite commander :\n- ' + label + ' (réf. ' + id + ')\n- Prix : ' +
+        (ht ? eur(variante.prix) + ' HT' : eur(variante.prix) + ' TTC') + '\n\nNom :\nTéléphone :\nAdresse de livraison :\n\nMerci.';
+      btn.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Commande ' + id) + '&body=' + encodeURIComponent(body);
+    }
+    show('ready');
+  }
+})();
+</script>
+</body>
+</html>
