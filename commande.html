@@ -40,7 +40,7 @@
 
     <div class="co-empty" data-state="empty" hidden>
       <h1>Ce produit est introuvable</h1>
-      <p>Le lien utilisé est incomplet ou le produit n'est plus disponible. Retrouvez toutes nos bornes dans la boutique Cohesif Energy.</p>
+      <p>Le lien utilisé est incomplet ou le produit n'est plus disponible. Retrouvez tous nos produits dans la boutique Cohesif Energy.</p>
       <a class="co-pay" href="https://cohesifenergy.fr/boutique.html">Voir la boutique</a>
     </div>
 
@@ -195,7 +195,7 @@
     } else {
       lignes.push(['Prix TTC', eur(variante.prix)]);
     }
-    lignes.push(['Livraison', produit.gamme === 'ac' ? '<span class="free">Offerte</span>' : '<span class="free">Incluse</span>']);
+    lignes.push(['Livraison', produit.gamme === 'dc' ? '<span class="free">Incluse</span>' : '<span class="free">Offerte</span>']);
     $('lignes').innerHTML = lignes.map(function (l) {
       return '<li><span class="muted">' + l[0] + '</span><span>' + l[1] + '</span></li>';
     }).join('');

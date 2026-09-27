@@ -108,10 +108,12 @@ def main():
                     "metadata": {"ref": ref, "marque": cat["marque"]},
                     "default_price_data": {"currency": "eur", "unit_amount": montant},
                 })
-                if p["gamme"] == "ac":
-                    rate = shipping_rate("Livraison offerte — France métropolitaine", "business_day", 7, 12)
-                else:
+                if p["gamme"] == "dc":
                     rate = shipping_rate("Livraison sur palette incluse — France métropolitaine", "week", 6, 8)
+                elif p["gamme"] == "batterie":
+                    rate = shipping_rate("Livraison offerte — France métropolitaine", "business_day", 7, 10)
+                else:
+                    rate = shipping_rate("Livraison offerte — France métropolitaine", "business_day", 7, 12)
                 message = ("Acompte de réservation. Le solde est réglé par virement avant expédition. "
                            if acompte else "")
                 link = stripe(key, "payment_links", {
