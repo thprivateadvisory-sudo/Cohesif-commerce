@@ -407,7 +407,7 @@
     .cohesif-mobile-sticky-cta { display: none; }
 
     @media (max-width: 768px) {
-      .cohesif-ai-assistant { bottom: 90px; right: 16px; }
+      .cohesif-ai-assistant { bottom: 148px; right: 14px; }
       .cohesif-ai-avatar { width: 56px; height: 56px; }
       .cohesif-ai-bubble { bottom: 72px; width: 240px; }
       .cohesif-ai-chat { bottom: 72px; width: calc(100vw - 32px); height: 70vh; }
