@@ -1,0 +1,43 @@
+# Crée les produits, prix et liens de paiement Stripe de la boutique (tools/stripe_setup.py).
+# Lancement manuel uniquement. Le résultat (data/paiements.json) est poussé sur une branche
+# stripe-liens-<mode> : on le vérifie avant de le mettre en ligne.
+name: Liens de paiement Stripe
+
+on:
+  workflow_dispatch:
+    inputs:
+      cle:
+        description: "Clé secrète Stripe (sk_test_... ou sk_live_...) — laisser vide pour utiliser le secret STRIPE_SECRET_KEY"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Masquer la clé
+        env:
+          CLE: ${{ inputs.cle }}
+        run: |
+          if [ -n "$CLE" ]; then echo "::add-mask::$CLE"; fi
+
+      - uses: actions/checkout@v4
+
+      - name: Créer les liens de paiement
+        env:
+          STRIPE_SECRET_KEY: ${{ inputs.cle != '' && inputs.cle || secrets.STRIPE_SECRET_KEY }}
+        run: python3 tools/stripe_setup.py | tee resultat.txt
+
+      - name: Publier le résultat sur une branche
+        run: |
+          MODE=$(python3 -c "import json;print(json.load(open('data/paiements.json'))['mode'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "stripe-liens-$MODE"
+          git add data/paiements.json
+          git commit -m "Liens de paiement Stripe ($MODE)"
+          git push -f origin "stripe-liens-$MODE"
+          { echo "## Liens Stripe ($MODE)"; echo '```'; cat resultat.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
