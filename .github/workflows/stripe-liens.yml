@@ -4,6 +4,8 @@
 name: Liens de paiement Stripe
 
 on:
+  push:
+    branches: [claude/add-battery-product-shop-ykmste]
   workflow_dispatch:
     inputs:
       cle:
