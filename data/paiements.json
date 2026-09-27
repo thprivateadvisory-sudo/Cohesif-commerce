@@ -1,0 +1,21 @@
+{
+  "_info": "Liens de paiement Stripe par référence produit. Rempli par tools/stripe_setup.py. Un lien vide = paiement pas encore activé (la page propose alors une commande par e-mail).",
+  "mode": "",
+  "liens": {
+    "CE-AC7": "",
+    "CE-AC7-POSE": "",
+    "CE-AC22": "",
+    "CE-AC22-POSE": "",
+    "CE-DC20W": "",
+    "CE-DC30W": "",
+    "CE-DC40W": "",
+    "CE-DC60W2": "",
+    "CE-DC40F": "",
+    "CE-DC50F": "",
+    "CE-DC60F": "",
+    "CE-DC80F": "",
+    "CE-DC120F": "",
+    "CE-DC180F": "",
+    "CE-DC240F": ""
+  }
+}

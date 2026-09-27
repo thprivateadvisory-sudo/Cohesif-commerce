@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commande confirmée — merci ! | Cohesif Commerce</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0c1c33" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./commande.css" />
+</head>
+<body>
+
+<header class="co-header">
+  <div class="wrap">
+    <a href="./index.html" class="co-brand">
+      <img src="./img/logo-commerce-mark.png" alt="" width="34" height="37" />
+      <span><strong>COHESIF COMMERCE</strong><small>Société du Groupe Cohesif</small></span>
+    </a>
+  </div>
+</header>
+
+<main class="co-main">
+  <div class="wrap">
+    <ol class="co-steps" aria-label="Étapes de la commande">
+      <li class="done"><span>✓</span>Récapitulatif</li>
+      <li class="done"><span>✓</span>Livraison et paiement</li>
+      <li class="active"><span>3</span>Confirmation</li>
+    </ol>
+    <div class="co-card co-doc" style="text-align:center;">
+      <div class="co-success-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1>Merci, votre commande est confirmée !</h1>
+      <p>Votre paiement a bien été reçu. Un reçu et votre facture vous ont été envoyés par e-mail.</p>
+      <ol class="co-next" data-next></ol>
+      <p>Une question sur votre commande ? Écrivez-nous à <a href="mailto:cohesifcommerce@gmail.com">cohesifcommerce@gmail.com</a> en indiquant l'adresse e-mail utilisée pour le paiement.</p>
+      <p style="margin-top:20px;"><a class="co-pay" style="max-width:320px;margin:0 auto;" href="https://cohesifenergy.fr/boutique.html">Retour à la boutique</a></p>
+    </div>
+  </div>
+</main>
+
+<script>
+(function () {
+  var id = (new URLSearchParams(location.search).get('produit') || '').toUpperCase();
+  var steps;
+  if (/-POSE$/.test(id)) {
+    steps = [
+      'Sous 48 h ouvrées, un technicien vous contacte pour valider votre installation sur photos.',
+      'Nous fixons ensemble la date d\'intervention de nos électriciens IRVE.',
+      'Votre borne est posée, testée et mise en service. Vous recevez l\'attestation de conformité.'
+    ];
+  } else if (/^CE-DC/.test(id)) {
+    steps = [
+      'Sous 48 h ouvrées, nous vous contactons pour confirmer la configuration de votre borne.',
+      'Nous vous adressons la facture du solde, payable par virement avant expédition.',
+      'Votre borne est livrée sur palette. Nous pouvons chiffrer son raccordement si besoin.'
+    ];
+  } else {
+    steps = [
+      'Nous préparons votre commande et vous confirmons l\'expédition par e-mail.',
+      'Vous recevez le numéro de suivi de votre colis.',
+      'Faites poser votre borne par un électricien qualifié IRVE, ou demandez-nous un devis de pose.'
+    ];
+  }
+  document.querySelector('[data-next]').innerHTML = steps.map(function (s, i) {
+    return '<li><b>' + (i + 1) + '</b><span>' + s + '</span></li>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

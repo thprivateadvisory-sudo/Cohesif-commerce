@@ -1,0 +1,377 @@
+{
+  "marque": "Cohesif Energy",
+  "site": "https://cohesifenergy.fr",
+  "vendeur": "Cohesif Commerce",
+  "commandeUrl": "https://cohesifcommerce.fr/commande.html",
+  "misAJour": "2026-09-27",
+  "produits": [
+    {
+      "slug": "boutique-borne-recharge-7kw",
+      "gamme": "ac",
+      "cible": "Maison · Garage · Petite entreprise",
+      "nom": "Borne de recharge 7 kW",
+      "accroche": "La borne murale pour recharger chez vous, jusqu'à 7× plus vite qu'une prise classique.",
+      "badge": "Meilleure vente",
+      "image": "img/boutique/ac-7kw.webp",
+      "galerie": [
+        "img/boutique/ac-7kw.webp",
+        "img/boutique/vie-maison.webp",
+        "img/boutique/vie-parking-souterrain.webp"
+      ],
+      "affichage": "TTC",
+      "paiement": "total",
+      "delai": "Expédiée sous 7 à 12 jours ouvrés",
+      "livraison": "Livraison offerte en France métropolitaine",
+      "garantie": "Garantie 2 ans",
+      "autonomie": "≈ 40 km d'autonomie récupérés par heure de charge",
+      "points": [
+        "Écran couleur 4,3\" : suivi de la charge en temps réel",
+        "Câble Type 2 de 5 m intégré, compatible avec tous les véhicules électriques vendus en Europe",
+        "IP54 : installation intérieure ou extérieure",
+        "Compatible OCPP 1.6J : prête pour la supervision et la gestion à distance",
+        "Branchez, ça charge : aucun badge ni application obligatoire"
+      ],
+      "specs": {
+        "Puissance": "7 kW (32 A)",
+        "Alimentation": "Monophasé 230 V",
+        "Connecteur": "Câble attaché Type 2 (IEC 62196-2), 5 m",
+        "Écran": "LCD couleur 4,3\" + voyant LED",
+        "Indice de protection": "IP54",
+        "Protocole": "OCPP 1.6J",
+        "Rendement": "≥ 96 %",
+        "Boîtier": "PC + ABS ignifugé (UL94 V0)",
+        "Dimensions": "421 × 180 × 146 mm",
+        "Poids": "≈ 4 à 5 kg",
+        "Température d'usage": "-30 °C à +50 °C",
+        "Protections": "Surtension, sous-tension, surcharge, court-circuit, fuite de courant, foudre, surchauffe",
+        "Certification": "CE",
+        "Options (nous consulter)": "Badge RFID, Wi-Fi / Ethernet, câble 10 m, pied de fixation"
+      },
+      "variantes": [
+        {
+          "id": "CE-AC7",
+          "label": "Borne seule",
+          "detail": "Livrée chez vous, à faire poser par votre électricien IRVE",
+          "prix": 499
+        },
+        {
+          "id": "CE-AC7-POSE",
+          "label": "Borne + pose IRVE",
+          "detail": "Installation standard par nos électriciens qualifiés IRVE, mise en service incluse",
+          "prix": 1190,
+          "recommande": true
+        }
+      ]
+    },
+    {
+      "slug": "boutique-borne-recharge-22kw",
+      "gamme": "ac",
+      "cible": "Maison en triphasé · Entreprise · Hôtel",
+      "nom": "Borne de recharge 22 kW",
+      "accroche": "La puissance maximale en courant alternatif : une recharge complète pendant une pause déjeuner.",
+      "badge": "Recharge la plus rapide en AC",
+      "image": "img/boutique/ac-22kw.webp",
+      "galerie": [
+        "img/boutique/ac-22kw.webp",
+        "img/boutique/vie-parking-entreprise.webp",
+        "img/boutique/vie-pied.webp"
+      ],
+      "affichage": "TTC",
+      "paiement": "total",
+      "delai": "Expédiée sous 7 à 12 jours ouvrés",
+      "livraison": "Livraison offerte en France métropolitaine",
+      "garantie": "Garantie 2 ans",
+      "autonomie": "Jusqu'à ≈ 120 km récupérés par heure (selon le chargeur embarqué du véhicule)",
+      "points": [
+        "22 kW en triphasé : la recharge AC la plus rapide du marché",
+        "Écran couleur 4,3\" : suivi de la charge en temps réel",
+        "Câble Type 2 de 5 m intégré",
+        "IP54 : intérieur, extérieur, parking",
+        "OCPP 1.6J : supervision, partage et facturation de la recharge possibles"
+      ],
+      "specs": {
+        "Puissance": "22 kW (3 × 32 A)",
+        "Alimentation": "Triphasé 400 V",
+        "Connecteur": "Câble attaché Type 2 (IEC 62196-2), 5 m",
+        "Écran": "LCD couleur 4,3\" + voyant LED",
+        "Indice de protection": "IP54",
+        "Protocole": "OCPP 1.6J",
+        "Rendement": "≥ 96 %",
+        "Boîtier": "PC + ABS ignifugé (UL94 V0)",
+        "Dimensions": "421 × 180 × 146 mm",
+        "Poids": "≈ 4 à 5 kg",
+        "Température d'usage": "-30 °C à +50 °C",
+        "Protections": "Surtension, sous-tension, surcharge, court-circuit, fuite de courant, foudre, surchauffe",
+        "Certification": "CE",
+        "Options (nous consulter)": "Badge RFID, Wi-Fi / Ethernet, câble 10 m, pied de fixation"
+      },
+      "variantes": [
+        {
+          "id": "CE-AC22",
+          "label": "Borne seule",
+          "detail": "Livrée chez vous, à faire poser par votre électricien IRVE",
+          "prix": 599
+        },
+        {
+          "id": "CE-AC22-POSE",
+          "label": "Borne + pose IRVE",
+          "detail": "Installation standard triphasée par nos électriciens qualifiés IRVE, mise en service incluse",
+          "prix": 1390,
+          "recommande": true
+        }
+      ]
+    },
+    {
+      "slug": "boutique-borne-rapide-dc-murale",
+      "gamme": "dc",
+      "cible": "Concession · Flotte · Commerce · Hôtel",
+      "nom": "Borne rapide DC murale",
+      "accroche": "La recharge rapide sans génie civil : se fixe au mur, recharge un véhicule en 1 à 2 heures.",
+      "badge": "Idéale pour démarrer",
+      "image": "img/boutique/dc-murale.webp",
+      "galerie": [
+        "img/boutique/dc-murale.webp",
+        "img/boutique/dc-murale-profil.webp",
+        "img/boutique/vie-station-rapide.webp"
+      ],
+      "affichage": "HT",
+      "paiement": "acompte",
+      "acomptePct": 30,
+      "delai": "Livraison sous 6 à 8 semaines",
+      "livraison": "Livraison sur palette incluse en France métropolitaine",
+      "garantie": "Garantie 2 ans pièces",
+      "autonomie": "Jusqu'à ≈ 200 km récupérés en 1 heure (version 40 kW)",
+      "points": [
+        "Courant continu : 3 à 6× plus rapide qu'une borne AC",
+        "Connecteur CCS2, le standard de recharge rapide en Europe",
+        "Écran tactile couleur 7\" : paiement par badge, application ou QR code",
+        "OCPP 1.6J : se connecte à votre plateforme de supervision",
+        "IP54 et boîtier anti-vandalisme IK08"
+      ],
+      "specs": {
+        "Puissance": "20, 30 ou 40 kW",
+        "Alimentation": "Triphasé 400 V ±15 %, 50/60 Hz",
+        "Tension de sortie": "200 à 1000 V DC",
+        "Courant de sortie": "0 à 200 A",
+        "Connecteur": "1 pistolet CCS2, câble 5 m",
+        "Écran": "Tactile couleur 7\"",
+        "Paiement": "Badge RFID / application / QR code",
+        "Protocole": "OCPP 1.6J, Ethernet",
+        "Rendement": "≥ 94,5 %",
+        "Indice de protection": "IP54, IK08",
+        "Dimensions": "660 × 480 × 230 mm",
+        "Température d'usage": "-40 °C à +70 °C",
+        "Normes": "IEC 61851, ISO 15118 / DIN 70121, IEC 62196",
+        "Protections": "Surtension, sous-tension, surcharge, court-circuit, isolement, fuite, foudre, arrêt d'urgence",
+        "Certification": "CE"
+      },
+      "variantes": [
+        {
+          "id": "CE-DC20W",
+          "label": "20 kW",
+          "detail": "1 pistolet CCS2",
+          "prix": 4990
+        },
+        {
+          "id": "CE-DC30W",
+          "label": "30 kW",
+          "detail": "1 pistolet CCS2",
+          "prix": 5490,
+          "recommande": true
+        },
+        {
+          "id": "CE-DC40W",
+          "label": "40 kW",
+          "detail": "1 pistolet CCS2",
+          "prix": 5990
+        }
+      ]
+    },
+    {
+      "slug": "boutique-borne-rapide-dc-60kw-double",
+      "gamme": "dc",
+      "cible": "Flotte · Parking · Commerce",
+      "nom": "Borne rapide DC murale 60 kW · 2 points de charge",
+      "accroche": "Deux véhicules rechargés en même temps sur une seule borne murale.",
+      "badge": "2 véhicules simultanés",
+      "image": "img/boutique/dc-murale-double.webp",
+      "galerie": [
+        "img/boutique/dc-murale-double.webp",
+        "img/boutique/vie-parking-entreprise.webp",
+        "img/boutique/vie-station-rapide.webp"
+      ],
+      "affichage": "HT",
+      "paiement": "acompte",
+      "acomptePct": 30,
+      "delai": "Livraison sous 6 à 8 semaines",
+      "livraison": "Livraison sur palette incluse en France métropolitaine",
+      "garantie": "Garantie 2 ans pièces",
+      "autonomie": "≈ 300 km récupérés en 1 heure sur un seul véhicule",
+      "points": [
+        "2 pistolets CCS2 : deux véhicules en charge simultanée",
+        "Répartition dynamique de la puissance entre les deux points",
+        "Écran tactile couleur 7\" : badge, application ou QR code",
+        "OCPP 1.6J : supervision et facturation de la recharge",
+        "Format mural : pas de massif béton à couler"
+      ],
+      "specs": {
+        "Puissance": "60 kW partagés sur 2 pistolets",
+        "Alimentation": "Triphasé 400 V ±15 %, 50/60 Hz",
+        "Tension de sortie": "200 à 1000 V DC",
+        "Connecteurs": "2 pistolets CCS2, câbles 5 m",
+        "Écran": "Tactile couleur 7\"",
+        "Paiement": "Badge RFID / application / QR code",
+        "Protocole": "OCPP 1.6J, Ethernet",
+        "Rendement": "≥ 94,5 %",
+        "Indice de protection": "IP54",
+        "Température d'usage": "-40 °C à +70 °C",
+        "Normes": "IEC 61851, ISO 15118 / DIN 70121, IEC 62196",
+        "Certification": "CE"
+      },
+      "variantes": [
+        {
+          "id": "CE-DC60W2",
+          "label": "60 kW · 2 pistolets",
+          "detail": "Format mural",
+          "prix": 8990,
+          "recommande": true
+        }
+      ]
+    },
+    {
+      "slug": "boutique-borne-rapide-dc-sur-pied",
+      "gamme": "dc",
+      "cible": "Station · Parking public · Concession · Flotte",
+      "nom": "Borne rapide DC sur pied · 2 points de charge",
+      "accroche": "La borne de station de recharge : robuste, visible, deux véhicules en même temps.",
+      "badge": "Le meilleur rapport puissance/prix",
+      "image": "img/boutique/dc-sur-pied.webp",
+      "galerie": [
+        "img/boutique/dc-sur-pied.webp",
+        "img/boutique/dc-coloris.webp",
+        "img/boutique/vie-station-rapide.webp"
+      ],
+      "affichage": "HT",
+      "paiement": "acompte",
+      "acomptePct": 30,
+      "delai": "Livraison sous 6 à 8 semaines",
+      "livraison": "Livraison sur palette incluse en France métropolitaine",
+      "garantie": "Garantie 2 ans pièces",
+      "autonomie": "Jusqu'à ≈ 400 km récupérés en 1 heure (version 80 kW)",
+      "points": [
+        "2 pistolets CCS2 : deux véhicules en charge simultanée",
+        "Écran tactile couleur 7\" : badge, application ou QR code",
+        "Architecture modulaire : la borne continue de fonctionner si un module est en maintenance",
+        "OCPP 1.6J : supervision et facturation de la recharge",
+        "IP54, de -40 °C à +70 °C : pensée pour l'extérieur"
+      ],
+      "specs": {
+        "Puissance": "40, 50, 60 ou 80 kW",
+        "Alimentation": "Triphasé 400 V ±15 %, 50/60 Hz",
+        "Tension de sortie": "200 à 1000 V DC",
+        "Courant de sortie": "0 à 250 A",
+        "Connecteurs": "2 pistolets CCS2, câbles 5 m",
+        "Écran": "Tactile couleur 7\"",
+        "Paiement": "Badge RFID / application / QR code",
+        "Protocole": "OCPP 1.6J, Ethernet",
+        "Rendement": "≥ 94,5 %",
+        "Indice de protection": "IP54",
+        "Dimensions": "650 × 620 × 1700 mm",
+        "Refroidissement": "Ventilation forcée, ≤ 60 dB",
+        "Normes": "IEC 61851, ISO 15118 / DIN 70121, IEC 62196",
+        "Certification": "CE"
+      },
+      "variantes": [
+        {
+          "id": "CE-DC40F",
+          "label": "40 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 8490
+        },
+        {
+          "id": "CE-DC50F",
+          "label": "50 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 8990
+        },
+        {
+          "id": "CE-DC60F",
+          "label": "60 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 9490,
+          "recommande": true
+        },
+        {
+          "id": "CE-DC80F",
+          "label": "80 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 10990
+        }
+      ]
+    },
+    {
+      "slug": "boutique-borne-ultra-rapide-dc",
+      "gamme": "dc",
+      "cible": "Station-service · Autoroute · Hub de flotte",
+      "nom": "Borne ultra-rapide DC · 120 à 240 kW",
+      "accroche": "La recharge haute puissance : 10 à 80 % en une vingtaine de minutes sur les véhicules compatibles.",
+      "badge": "Haute puissance",
+      "image": "img/boutique/dc-ultra.webp",
+      "galerie": [
+        "img/boutique/dc-ultra.webp",
+        "img/boutique/dc-sur-pied-face.webp",
+        "img/boutique/vie-station-rapide.webp"
+      ],
+      "affichage": "HT",
+      "paiement": "acompte",
+      "acomptePct": 30,
+      "delai": "Livraison sous 6 à 8 semaines",
+      "livraison": "Livraison sur palette incluse en France métropolitaine",
+      "garantie": "Garantie 2 ans pièces",
+      "autonomie": "10 à 80 % en ≈ 20 à 30 min (selon le véhicule)",
+      "points": [
+        "Jusqu'à 240 kW partagés sur 2 pistolets CCS2",
+        "Tension de sortie jusqu'à 1000 V : compatible avec les véhicules 800 V",
+        "Architecture modulaire à haute disponibilité",
+        "Écran tactile couleur 7\" : badge, application ou QR code",
+        "OCPP 1.6J : intégration aux réseaux d'itinérance et de supervision"
+      ],
+      "specs": {
+        "Puissance": "120, 180 ou 240 kW",
+        "Alimentation": "Triphasé 400 V ±15 %, 50/60 Hz",
+        "Tension de sortie": "200 à 1000 V DC",
+        "Courant de sortie": "0 à 250 A",
+        "Connecteurs": "2 pistolets CCS2, câbles 5 m",
+        "Écran": "Tactile couleur 7\"",
+        "Paiement": "Badge RFID / application / QR code",
+        "Protocole": "OCPP 1.6J, Ethernet",
+        "Rendement": "≥ 94,5 %",
+        "Indice de protection": "IP54",
+        "Dimensions": "650 × 620 × 1700 mm",
+        "Normes": "IEC 61851, ISO 15118 / DIN 70121, IEC 62196",
+        "Certification": "CE"
+      },
+      "variantes": [
+        {
+          "id": "CE-DC120F",
+          "label": "120 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 14990,
+          "recommande": true
+        },
+        {
+          "id": "CE-DC180F",
+          "label": "180 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 19990
+        },
+        {
+          "id": "CE-DC240F",
+          "label": "240 kW",
+          "detail": "2 pistolets CCS2",
+          "prix": 24990
+        }
+      ]
+    }
+  ]
+}
