@@ -4,6 +4,9 @@
 name: Liens de paiement Stripe
 
 on:
+  push:
+    branches: [claude/cohesive-ecommerce-strategy-4vbh26]
+    paths: [.github/workflows/stripe-liens.yml]
   workflow_dispatch:
     inputs:
       cle:
