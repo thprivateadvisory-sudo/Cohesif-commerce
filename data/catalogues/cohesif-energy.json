@@ -372,6 +372,56 @@
           "prix": 24990
         }
       ]
+    },
+    {
+      "slug": "boutique-batterie-lithium-12v-100ah",
+      "gamme": "batterie",
+      "cible": "Solaire · Camping-car · Bateau · Maison",
+      "nom": "Batterie lithium LiFePO4 12 V 100 Ah",
+      "accroche": "1 280 Wh d'énergie, deux fois plus légère qu'une batterie plomb et jusqu'à 5 000 cycles de charge.",
+      "badge": "Nouveau",
+      "image": "img/boutique/batterie-lifepo4-100ah.webp",
+      "galerie": [
+        "img/boutique/batterie-lifepo4-100ah.webp",
+        "img/boutique/batterie-lifepo4-atouts.webp",
+        "img/boutique/batterie-lifepo4-dimensions.webp"
+      ],
+      "affichage": "TTC",
+      "paiement": "total",
+      "delai": "Livrée sous 7 à 10 jours ouvrés",
+      "livraison": "Livraison offerte en France métropolitaine",
+      "garantie": "Garantie 2 ans",
+      "autonomie": "1 280 Wh stockés : ≈ 24 h d'autonomie pour un réfrigérateur de camping-car",
+      "points": [
+        "Jusqu'à 5 000 cycles : plus de 10 ans d'usage, contre 300 à 500 cycles pour une batterie plomb",
+        "14 kg seulement : deux fois plus légère qu'une batterie plomb de même capacité",
+        "BMS intégré : protection contre la surcharge, la décharge profonde, les courts-circuits et la surchauffe",
+        "Chimie LiFePO4, la plus sûre des technologies lithium, stable et non inflammable",
+        "Sans entretien ni dégazage : se pose aussi bien dans un coffre de camping-car que dans un local technique"
+      ],
+      "specs": {
+        "Tension nominale": "12,8 V",
+        "Capacité": "100 Ah",
+        "Énergie": "1 280 Wh",
+        "Technologie": "Lithium fer phosphate (LiFePO4)",
+        "Durée de vie": "Jusqu'à 5 000 cycles",
+        "Protection": "BMS intégré : surcharge, décharge profonde, court-circuit, température",
+        "Temps de charge": "≈ 5 h avec un chargeur LiFePO4 de 20 A",
+        "Bornes": "Filetées M8, vis fournies",
+        "Dimensions": "300 × 194 × 198 mm",
+        "Poids": "14 kg",
+        "Température d'usage": "-10 °C à +60 °C",
+        "Transport": "2 poignées en corde",
+        "Certification": "CE, RoHS"
+      },
+      "variantes": [
+        {
+          "id": "CE-BAT12-100",
+          "label": "Batterie 12 V 100 Ah",
+          "detail": "Livrée prête à l'emploi, vis de bornes M8 fournies",
+          "prix": 279
+        }
+      ]
     }
   ]
 }
