@@ -1,21 +1,21 @@
 {
   "_info": "Liens de paiement Stripe par référence produit. Rempli par tools/stripe_setup.py. Un lien vide = paiement pas encore activé (la page propose alors une commande par e-mail).",
-  "mode": "",
+  "mode": "live",
   "liens": {
-    "CE-AC7": "",
-    "CE-AC7-POSE": "",
-    "CE-AC22": "",
-    "CE-AC22-POSE": "",
-    "CE-DC20W": "",
-    "CE-DC30W": "",
-    "CE-DC40W": "",
-    "CE-DC60W2": "",
-    "CE-DC40F": "",
-    "CE-DC50F": "",
-    "CE-DC60F": "",
-    "CE-DC80F": "",
-    "CE-DC120F": "",
-    "CE-DC180F": "",
-    "CE-DC240F": ""
+    "CE-AC7": "https://buy.stripe.com/14A28t8aS0lCgru7YRaVa0g",
+    "CE-AC7-POSE": "https://buy.stripe.com/3cIfZjcr8fgwgrugvnaVa0h",
+    "CE-AC22": "https://buy.stripe.com/4gMdRbezg1pGa3692VaVa0i",
+    "CE-AC22-POSE": "https://buy.stripe.com/9B6dRb1Mu4BSejm2ExaVa0j",
+    "CE-DC20W": "https://buy.stripe.com/fZu7sNfDk2tKb7a7YRaVa0k",
+    "CE-DC30W": "https://buy.stripe.com/3cIaEZaj08S81wAenfaVa0l",
+    "CE-DC40W": "https://buy.stripe.com/8x27sN76O4BScbe2ExaVa0m",
+    "CE-DC60W2": "https://buy.stripe.com/bJe14paj00lC0sw0wpaVa0n",
+    "CE-DC40F": "https://buy.stripe.com/9B68wRfDkb0g1wAfrjaVa0o",
+    "CE-DC50F": "https://buy.stripe.com/5kQaEZdvc5FWdfi4MFaVa0p",
+    "CE-DC60F": "https://buy.stripe.com/5kQbJ39eWc4ka36cf7aVa0q",
+    "CE-DC80F": "https://buy.stripe.com/4gM7sN9eWecsdfia6ZaVa0r",
+    "CE-DC120F": "https://buy.stripe.com/3cI7sN3UC3xO0swenfaVa0s",
+    "CE-DC180F": "https://buy.stripe.com/14A00l9eW0lCb7adjbaVa0t",
+    "CE-DC240F": "https://buy.stripe.com/14A14pdvcecsa365QJaVa0u"
   }
 }
