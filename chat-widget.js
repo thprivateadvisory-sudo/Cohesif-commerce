@@ -5,8 +5,8 @@
 (function () {
   'use strict';
 
-  const BRAND_BLACK = '#111111';
-  const BRAND_SOFT  = '#f5f5f5';
+  const BRAND_BLACK = '#0e1b2f';
+  const BRAND_SOFT  = '#f4f1eb';
 
   // ─── FAQ avec suggestions de navigation ───────────────────────────────────
   const faqData = [
@@ -146,7 +146,7 @@
       transform: translateY(10px) scale(0.95);
       transition: opacity 0.4s, transform 0.4s;
       pointer-events: none;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
     .cohesif-ai-bubble.show {
       opacity: 1;
@@ -234,7 +234,7 @@
       flex-direction: column;
       overflow: hidden;
       transform-origin: bottom right;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
     .cohesif-ai-chat.open {
       display: flex;
@@ -417,8 +417,8 @@
         position: fixed;
         bottom: 16px; left: 16px; right: 16px;
         z-index: 9998;
-        background: #111;
-        border-radius: 999px;
+        background: #0e1b2f;
+        border-radius: 4px;
         padding: 4px 4px 4px 20px;
         align-items: center;
         justify-content: space-between;
@@ -434,7 +434,7 @@
         color: #fff;
         font-size: 14px; font-weight: 600;
         line-height: 1.2;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       }
       .cohesif-mobile-sticky-cta-text small {
         display: block;
@@ -443,13 +443,13 @@
         margin-top: 2px; letter-spacing: 0.5px;
       }
       .cohesif-mobile-sticky-cta-btn {
-        background: #333;
-        color: #fff;
+        background: #ece8df;
+        color: #0e1b2f;
         font-size: 13px; font-weight: 700;
         padding: 12px 18px;
-        border-radius: 999px;
+        border-radius: 2px;
         white-space: nowrap; flex-shrink: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       }
     }
   `;
