@@ -460,7 +460,7 @@
 
   --max-w: 1280px;
   --gutter: clamp(20px, 4vw, 56px);
-  --nav-h: 76px;
+  --nav-h: 88px;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -607,12 +607,12 @@ p { color: var(--ink-3); line-height: 1.65; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(244, 241, 235, 0);
+  background: var(--paper);
   border-bottom: 1px solid transparent;
   transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease);
 }
 .nav.scrolled {
-  background: rgba(244, 241, 235, 0.9);
+  background: rgba(244, 241, 235, 0.96);
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   border-bottom-color: var(--line);
@@ -635,29 +635,10 @@ p { color: var(--ink-3); line-height: 1.65; }
   gap: 12px;
   justify-self: start;
 }
-.brand-mark {
-  width: 34px;
-  height: auto;
+.brand-logo {
+  height: 62px;
+  width: auto;
   mix-blend-mode: multiply;
-}
-.brand-word {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  font-family: var(--sans);
-  color: var(--ink);
-}
-.brand-word strong {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-}
-.brand-word small {
-  font-size: 9.5px;
-  font-weight: 500;
-  letter-spacing: 0.42em;
-  margin-top: 5px;
-  color: var(--ink-3);
 }
 
 .nav-links {
@@ -1288,8 +1269,8 @@ p { color: var(--ink-3); line-height: 1.65; }
 .cta .btn-primary:hover { background: #fff; }
 
 .footer {
-  background: var(--navy);
-  color: var(--on-navy-2);
+  background: var(--paper);
+  color: var(--ink-3);
   padding: 0 0 36px;
 }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
@@ -1297,19 +1278,16 @@ p { color: var(--ink-3); line-height: 1.65; }
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 48px;
-  padding: 72px 0 64px;
-  border-top: 1px solid var(--on-navy-3);
+  padding: 80px 0 64px;
 }
 .footer-brand { display: flex; flex-direction: column; gap: 24px; }
-.footer .brand-mark { mix-blend-mode: screen; filter: invert(1) grayscale(1) brightness(1.15); }
-.footer .brand-word { color: var(--on-navy); }
-.footer .brand-word small { color: var(--on-navy-2); }
+.footer .brand-logo { height: 104px; }
 .footer-tagline {
   font-family: var(--serif);
   font-size: 22px;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  color: var(--on-navy);
+  color: var(--ink);
   max-width: 24ch;
 }
 .footer-col h5 {
@@ -1317,12 +1295,12 @@ p { color: var(--ink-3); line-height: 1.65; }
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--on-navy-2);
+  color: var(--ink-4);
   margin-bottom: 22px;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.footer-col a { font-size: 15px; color: var(--on-navy); opacity: 0.86; transition: opacity 0.2s; }
-.footer-col a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.footer-col a { font-size: 15px; color: var(--ink-2); transition: color 0.2s; }
+.footer-col a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 
 .footer-bottom {
   display: flex;
@@ -1330,19 +1308,19 @@ p { color: var(--ink-3); line-height: 1.65; }
   align-items: center;
   gap: 16px;
   padding-top: 28px;
-  border-top: 1px solid var(--on-navy-3);
+  border-top: 1px solid var(--line);
   font-size: 13px;
-  color: var(--on-navy-2);
+  color: var(--ink-4);
   flex-wrap: wrap;
 }
 .footer-legal { display: flex; gap: 28px; flex-wrap: wrap; }
 .legal-link {
-  color: var(--on-navy-2);
+  color: var(--ink-4);
   font-size: 13px;
   padding: 0;
   transition: color 0.2s;
 }
-.legal-link:hover { color: var(--on-navy); }
+.legal-link:hover { color: var(--ink); }
 
 /* ==========================================================================
    MODALES
@@ -1550,7 +1528,8 @@ p { color: var(--ink-3); line-height: 1.65; }
 }
 
 @media (max-width: 960px) {
-  :root { --nav-h: 68px; }
+  :root { --nav-h: 72px; }
+  .nav .brand-logo { height: 52px; }
 
   .nav-inner { grid-template-columns: 1fr auto; }
   .nav-links, .nav-cta { display: none; }
@@ -1885,8 +1864,7 @@ p { color: var(--ink-3); line-height: 1.65; }
 <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale Cohesif Commerce">
   <div class="nav-inner">
     <a href="#top" class="brand" data-scroll>
-      <img src="img/logo-commerce-mark.png" alt="" class="brand-mark" width="34" height="37">
-      <span class="brand-word" aria-label="Cohesif Commerce"><strong>COHESIF</strong><small>COMMERCE</small></span>
+      <img src="img/logo-cohesif-commerce.png" alt="Cohesif Commerce" class="brand-logo" width="409" height="480">
     </a>
     <ul class="nav-links">
       <li><a href="#solution" data-scroll>Solution</a></li>
@@ -2419,8 +2397,7 @@ p { color: var(--ink-3); line-height: 1.65; }
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#top" class="brand" data-scroll>
-          <img src="img/logo-commerce-mark.png" alt="" class="brand-mark" width="34" height="37">
-          <span class="brand-word" aria-label="Cohesif Commerce"><strong>COHESIF</strong><small>COMMERCE</small></span>
+          <img src="img/logo-cohesif-commerce.png" alt="Cohesif Commerce" class="brand-logo" width="409" height="480">
         </a>
         <p class="footer-tagline">Construire des business rentables, de l’idée à l’exécution internationale.</p>
       </div>
