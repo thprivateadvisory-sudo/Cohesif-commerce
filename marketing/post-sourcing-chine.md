@@ -1,6 +1,6 @@
 # Post — Sourcing Chine (LinkedIn / Instagram / Facebook)
 
-Visuel : `pub-sourcing-chine.png` (format 4:5, 2160 × 2700)
+Visuel : `pub-sourcing-chine-carre.png` (carré 1080 × 1080, recommandé — s'affiche sans recadrage partout). Variante portrait : `pub-sourcing-chine.png` (4:5).
 
 ---
 
