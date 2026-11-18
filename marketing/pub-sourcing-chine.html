@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pub — Sourcing Chine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f1eb; --card:#fbfaf6; --ink:#0e1b2f; --on-navy:#ece8df;
+    --seal:#b0442b; --line:rgba(14,27,47,.16); --ink-3:rgba(14,27,47,.62);
+    --serif:'Newsreader',Georgia,serif; --sans:'Schibsted Grotesk',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px;background:var(--paper)}
+  body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+
+  /* grain papier */
+  body::before{content:"";position:absolute;inset:0;opacity:.35;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .1 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  .wrap{position:absolute;inset:0;padding:64px 72px 0}
+
+  header{display:flex;justify-content:space-between;align-items:center;padding-bottom:22px;border-bottom:1.5px solid var(--ink)}
+  .brand{display:flex;align-items:center;gap:16px}
+  .brand img{width:46px;height:auto;mix-blend-mode:multiply}
+  .brand b{font-weight:700;letter-spacing:.22em;font-size:19px}
+  .brand span{display:block;font-weight:500;letter-spacing:.38em;font-size:11px;color:var(--ink-3);margin-top:3px}
+  .issue{font-size:14px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-align:right;line-height:1.5}
+  .issue em{font-style:normal;color:var(--seal)}
+
+  .kicker{margin-top:58px;font-size:16px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--seal);display:flex;align-items:center;gap:14px}
+  .kicker::before{content:"";width:38px;height:2px;background:var(--seal)}
+
+  h1{font-family:var(--serif);font-weight:400;font-size:112px;line-height:.98;letter-spacing:-.035em;margin-top:22px;font-variation-settings:"opsz" 72}
+  h1 .num{font-feature-settings:"lnum";white-space:nowrap}
+  h1 em{font-style:italic;font-weight:300;color:var(--seal)}
+
+  .lede{margin-top:30px;font-size:25px;line-height:1.42;max-width:780px;color:rgba(14,27,47,.82)}
+  .lede strong{color:var(--ink);font-weight:600}
+
+  /* Lettre de voiture */
+  .waybill{position:absolute;left:72px;right:72px;top:790px;background:var(--card);
+    border:1.5px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+  .wb-top{display:grid;grid-template-columns:1fr 1fr 230px;border-bottom:1.5px solid var(--ink)}
+  .wb-cell{padding:18px 22px;border-right:1.5px solid var(--ink)}
+  .wb-cell:last-child{border-right:0}
+  .lbl{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ink-3)}
+  .val{font-family:var(--serif);font-size:30px;margin-top:6px;letter-spacing:-.01em}
+  .val small{display:block;font-family:var(--sans);font-size:14px;color:var(--ink-3);margin-top:2px;letter-spacing:.02em}
+  .barcode{height:52px;margin-top:8px;display:flex;align-items:stretch;gap:0}
+  .barcode i{display:block;background:var(--ink)}
+  .code{font-size:11px;letter-spacing:.32em;margin-top:5px;font-weight:500}
+
+  .route{display:grid;grid-template-columns:repeat(4,1fr);padding:28px 22px 32px;position:relative}
+  .route::before{content:"";position:absolute;left:52px;right:calc(25% - 10px);top:44px;border-top:2px dashed var(--ink)}
+  .step{position:relative;text-align:left;padding-right:12px}
+  .dot{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--on-navy);display:grid;place-items:center;position:relative;z-index:1;border:4px solid var(--card)}
+  .dot svg{width:18px;height:18px}
+  .step:last-child .dot{background:var(--seal)}
+  .step h4{font-size:19px;font-weight:600;margin-top:12px;letter-spacing:-.005em}
+  .step p{font-size:14.5px;color:var(--ink-3);margin-top:3px;line-height:1.35}
+
+  /* Tampon */
+  .stamp{position:absolute;right:70px;top:300px;width:250px;height:250px;transform:rotate(-12deg);color:var(--seal);z-index:3;mix-blend-mode:multiply;opacity:.94}
+  .stamp svg{width:100%;height:100%;filter:url(#rough)}
+
+  /* Bandeau CTA */
+  .cta{position:absolute;left:0;right:0;bottom:0;height:178px;background:var(--ink);color:var(--on-navy);
+    display:flex;align-items:center;justify-content:space-between;padding:0 72px}
+  .cta .l .t{font-family:var(--serif);font-size:42px;letter-spacing:-.02em;line-height:1.05}
+  .cta .l .t em{font-style:italic;color:#e9a38f}
+  .cta .l .s{font-size:16px;letter-spacing:.06em;opacity:.7;margin-top:10px}
+  .cta .btn{background:var(--paper);color:var(--ink);padding:22px 30px;font-weight:700;font-size:19px;letter-spacing:.02em;display:flex;gap:14px;align-items:center;white-space:nowrap}
+  .cta .btn span{color:var(--seal);font-size:24px;line-height:1}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
+</svg>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <img src="../img/logo-commerce-mark.png" alt="">
+      <div><b>COHESIF</b><span>COMMERCE</span></div>
+    </div>
+    <div class="issue">Paris <em>⇄</em> Shenzhen<br>Sourcing · Qualité · Logistique</div>
+  </header>
+
+  <div class="kicker">Vous importez de Chine ?</div>
+  <h1>Votre usine est<br>à <span class="num">9 600 km.</span><br><em>Nous, on y est.</em></h1>
+  <p class="lede">Nos équipes à Shenzhen <strong>négocient, contrôlent et expédient</strong> pour vous. Vous gardez <strong>un seul interlocuteur à Paris</strong> — et vous recevez exactement ce que vous avez commandé.</p>
+</div>
+
+<div class="stamp">
+  <svg viewBox="0 0 200 200">
+    <defs><path id="c" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+    <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="4"/>
+    <circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text font-family="Schibsted Grotesk" font-weight="700" font-size="15.5" letter-spacing="3.2" fill="currentColor">
+      <textPath href="#c">APPEL STRATÉGIQUE ★ SANS ENGAGEMENT ★</textPath>
+    </text>
+    <text x="100" y="98" text-anchor="middle" font-family="Newsreader" font-size="54" font-weight="500" fill="currentColor">30</text>
+    <text x="100" y="120" text-anchor="middle" font-family="Schibsted Grotesk" font-size="13" font-weight="700" letter-spacing="3" fill="currentColor">MINUTES</text>
+    <text x="100" y="140" text-anchor="middle" font-family="Schibsted Grotesk" font-size="15" font-weight="700" letter-spacing="2.5" fill="currentColor">OFFERT</text>
+  </svg>
+</div>
+
+<div class="waybill">
+  <div class="wb-top">
+    <div class="wb-cell"><div class="lbl">Expéditeur</div><div class="val">Votre fournisseur<small>Shenzhen · Guangdong · CN</small></div></div>
+    <div class="wb-cell"><div class="lbl">Destinataire</div><div class="val">Votre entreprise<small>France · Europe</small></div></div>
+    <div class="wb-cell"><div class="lbl">Suivi</div><div class="barcode" id="bc"></div><div class="code">CC-SZX-PAR</div></div>
+  </div>
+  <div class="route">
+    <div class="step"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><h4>Usine visitée</h4><p>Fournisseur vu et vérifié sur place</p></div>
+    <div class="step"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><h4>Prix négocié</h4><p>En chinois, en direct, sans intermédiaire</p></div>
+    <div class="step"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><h4>Qualité contrôlée</h4><p>Inspection pendant la production</p></div>
+    <div class="step"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><h4>Livré</h4><p>Depuis notre entrepôt, jusqu'à vous</p></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="l">
+    <div class="t">Parlons de votre projet. <em>30 min, offert.</em></div>
+    <div class="s">Réponse sous 24 h ouvrées · cohesifcommerce.fr</div>
+  </div>
+  <div class="btn">Réserver mon appel <span>→</span></div>
+</div>
+
+<script>
+  // code-barres déterministe
+  const bc=document.getElementById('bc');let s=7;
+  const r=()=>{s=(s*9301+49297)%233280;return s/233280};
+  for(let i=0;i<46;i++){const b=document.createElement('i');b.style.width=(r()<.5?2:r()<.6?4:6)+'px';b.style.marginRight=(r()<.6?2:4)+'px';if(i%2)b.style.background='transparent';bc.appendChild(b)}
+</script>
+</body>
+</html>
